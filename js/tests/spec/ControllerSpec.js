@@ -13,7 +13,7 @@ describe('mainController', function() {
       var $scope = {};
       var controller = $controller('mainController', { $scope: $scope });
       
-      expect($scope.submitFunction('/thanks')).toEqual(true);
+      expect($scope.submitFunction('/thanks', true)).toEqual(true);
     });
   });
 });

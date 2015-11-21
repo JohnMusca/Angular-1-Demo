@@ -10,7 +10,7 @@
   <div ng-show="loginForm.login_name.$error.validName">Please enter John or Peter</div>
   
   <div>
-    <input type="button" name="submit" value="next" ng-click="submitFunction('/thanks')"/>
+    <input type="button" name="submit" value="next" ng-click="submitFunction('/thanks', loginForm.$valid)"/>
   </div>
   
   </form>
