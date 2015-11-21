@@ -1,6 +1,6 @@
 demoApp.controller('mainController', function($scope) 
 {
-  $scope.message = 'Hello, only John or Peter can proceed';
+  $scope.login_name = '';
 });
 
 

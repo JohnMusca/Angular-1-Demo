@@ -3,10 +3,15 @@
 
   <p>{{ message }}</p>
   
+  <form name="loginForm" accessible-form>
+  
   <label for="login_name">Enter your name: </label>
   <input id="login_name" name="login_name" ng-model="login_name" type="text" nameValidation/>
   
   <div>
     <input type="button" name="submit" value="next" ng-click=""/>
+    <span ng-show="loginForm.login_name.$error.validName">Please enter a valid name</span>
   </div>
+  
+  </form>
 </div>
