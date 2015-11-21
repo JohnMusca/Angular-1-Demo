@@ -1,8 +1,9 @@
 demoApp.controller('mainController', function($scope, $location, loginService) 
 {
-  $scope.login_name = '';
   
   $scope.submitFunction = function(path) {
+    //console.log('value: ' + $scope.loginForm.$valid + ' ' + $scope.login_name);
+    
     if($scope.loginForm.$valid) {
       $location.path( path );
       return true;
