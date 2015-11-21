@@ -18,14 +18,17 @@ demoApp.directive('validateName', function() {
                             return allowed_names === viewValue;
                           });
 
+        //high order function for handling validity
+        var handle_validity = function(isValidName, returnValue) {
+                                ctrl.$setValidity('validName', isValidName);
+                                return returnValue;
+                              };
+
         if(name_passed.length !== 0) {
-          ctrl.$setValidity('validName', true);
-          return viewValue;
+          return handle_validity(true, viewValue);
         }
         
-        ctrl.$setValidity('validName', false);
-        return undefined;
-
+        return handle_validity(false, undefined);
       });
     }
   };

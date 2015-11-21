@@ -6,7 +6,6 @@
 */
 demoApp.controller('mainController', function($scope, $location, loginService) 
 {
-  
   /**
   *  Handles submit.
   * 
