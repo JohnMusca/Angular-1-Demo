@@ -1,5 +1,5 @@
 describe("Login service", function () {
-  var loginService, httpBackend;
+  var loginService;
 
   beforeEach(module("demoApp"));
 
