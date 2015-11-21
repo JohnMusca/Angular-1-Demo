@@ -9,7 +9,7 @@
   <input id="login_name" name="login_name" ng-model="login_name" type="text" name-validation/>
   
   <div>
-    <input type="button" name="submit" value="next" ng-click="submitFunction"/>
+    <input type="button" name="submit" value="next" ng-click="submitFunction('/thanks')"/>
     <span ng-show="loginForm.login_name.$error.validName">Please enter a valid name</span>
   </div>
   

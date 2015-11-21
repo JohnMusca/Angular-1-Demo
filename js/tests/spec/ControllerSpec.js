@@ -12,8 +12,8 @@ describe('mainController', function() {
     it('ensures the form is valid before redirecting to second step', function() {
       var $scope = {};
       var controller = $controller('mainController', { $scope: $scope });
-
-      expect($scope.submitFunction).toEqual('blah');
+      
+      expect($scope.submitFunction('/thanks')).toEqual(true);
     });
   });
 });
