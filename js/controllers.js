@@ -1,10 +1,10 @@
 demoApp.controller('mainController', function($scope, $location, loginService) 
 {
-  
   $scope.submitFunction = function(path) {
-    //console.log('value: ' + $scope.loginForm.$valid + ' ' + $scope.login_name);
-    
+
     if($scope.loginForm.$valid) {
+      loginService.saveLoginResponse( {login_name: $scope.login_name} );
+      
       $location.path( path );
       return true;
     }
@@ -13,5 +13,5 @@ demoApp.controller('mainController', function($scope, $location, loginService)
 
 demoApp.controller('thanksController', function($scope, loginService) 
 {
-  $scope.message = 'Look! I am an about page.';
+  $scope.message = 'Well hello there ' + loginService.getLoginResponse().login_name + '.';
 });
