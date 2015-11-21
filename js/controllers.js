@@ -1,6 +1,12 @@
 demoApp.controller('mainController', function($scope) 
 {
   $scope.login_name = '';
+  
+  var submitFunction = function() {
+    return "blah";
+  };
+  
+  $scope.submitFunction=submitFunction();
 });
 
 
