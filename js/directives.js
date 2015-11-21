@@ -24,11 +24,10 @@ demoApp.directive('validateName', function() {
                                 return returnValue;
                               };
 
-        if(name_passed.length !== 0) {
-          return handle_validity(true, viewValue);
-        }
-        
-        return handle_validity(false, undefined);
+        //if the name passed is in the array, then return true, otherwise, false.
+        var response = ((name_passed.length !== 0) ? handle_validity(true, viewValue) : handle_validity(false, undefined));
+
+        return response;
       });
     }
   };
