@@ -7,7 +7,7 @@
  * These methods are used to save and retrieve the login variables for use throughout the application
  */
 demoApp.factory('loginService', function () {
-  var loginResponse = new Array();
+  var loginResponse = [];
 
   return {
       saveLoginResponse:function (data) {
