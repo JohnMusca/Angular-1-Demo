@@ -14,6 +14,7 @@ describe('mainController', function() {
       var controller = $controller('mainController', { $scope: $scope });
       
       expect($scope.submitFunction('/thanks', true)).toEqual(true);
+      expect($scope.submitFunction('/thanks', false)).toEqual(false);
     });
   });
 });
